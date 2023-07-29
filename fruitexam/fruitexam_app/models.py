@@ -13,9 +13,9 @@ class ProfileModel(models.Model):
             validators.MinLengthValidator(2),
             first_letter_validator,
         ),
-        # verbose_name='First Name'
 
     )
+
     last_name = models.CharField(
         blank=False,
         null=False,
@@ -24,8 +24,8 @@ class ProfileModel(models.Model):
             validators.MinLengthValidator(1),
             first_letter_validator,
         ),
-        # verbose_name='Last Name'
     )
+
     email = models.EmailField(
         blank=False,
         null=False,
@@ -39,8 +39,8 @@ class ProfileModel(models.Model):
         validators=(
             validators.MinLengthValidator(8),
         ),
-        # verbose_name='Password'
     )
+
     image_url = models.URLField(
         null=True,
         blank=True
